@@ -1,10 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 // import styles from '../styles/globals.css'
-import Header from '../components/Header';
-import PostCard from '../components/PostCard';
-import PostWidget from '../components/PostWidget';
-import Categories from '../components/Categories';
+import {Header, PostCard, PostWidget, Categories} from '../components';
 import { getPosts } from '../services'
 
 
