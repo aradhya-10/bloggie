@@ -2,7 +2,7 @@ import React from 'react'
 import { getPosts, getPostDetails } from '../../services'
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm} from '../../components';
 
-const Postdetails = () => {
+const PostDetails = ({post}) => {
   return (
 	<div className="container mx-auto px-10 mb-8">
 		<div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -23,7 +23,7 @@ const Postdetails = () => {
   )
 }
 
-export default Postdetails 
+export default PostDetails 
 
 export async function getStaticProps({params}){
 	const data = await getPostDetails(params.slug);
@@ -36,7 +36,7 @@ export async function getStaticPaths()
 {
 	const posts = await getPosts();
 	return{
-		paths: posts.map(({node:{slug}}) => ({params: { slug }})),
+		paths: posts.map(({node:{slug}}) => ({params:{ slug }})),
 		fallback: false,
 	}
 }
