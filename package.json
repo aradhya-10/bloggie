@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.11.16",
+    "@trendyol-js/react-carousel": "^3.0.2",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "graphql": "^16.6.0",
@@ -16,9 +21,11 @@
     "html-react-parser": "^3.0.4",
     "moment": "^2.29.4",
     "next": "13.0.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-multi-carousel": "^2.8.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-multi-carousel": "^2.8.3",
+    "react-responsive-carousel": "^3.2.23",
+    "react-simply-carousel": "^8.5.5",
     "sass": "^1.56.1"
   },
   "devDependencies": {
