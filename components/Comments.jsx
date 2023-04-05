@@ -10,12 +10,6 @@ const Comments = ({ slug }) => {
 		getComments(slug)
 		.then((result) => setComments(result))
 	}, [])
-
-	const handleCheck = (x) =>{
-		console.log("comments");
-		console.log(comments);
-		console.log(x);
-	}
 	
   return (
 	<>

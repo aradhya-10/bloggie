@@ -8,6 +8,7 @@ const FeaturedPost = ({post}) => {
 		<div className="absolute left-0 bg-black z-20 w-56 h-64 opacity-80"></div>
 		<div className="absolute flex items-center justify-center z-30 rounded-lg opacity-30 w-56 h-64">
 			<img
+				alt=""
 				src={post.featuredImage.url}
 				className="h-full object-cover"	
 			/>
@@ -17,6 +18,7 @@ const FeaturedPost = ({post}) => {
 		<div className="text-center font-semibold px-4"><Link href={`/post/${post.slug}`}>{post.title}</Link></div>
 		<div className="flex text-sm items-center">
 			<img
+				alt=""
 				src={post.author.image.url}
 				className="h-7 w-7 rounded-full object-cover mr-2"	
 			/>
