@@ -139,7 +139,7 @@ export const getCategoryPost = async (slug) => {
 				bio
 				name
 				id
-				photo {
+				image {
 				  url
 				}
 			  }
