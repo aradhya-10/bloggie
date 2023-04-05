@@ -41,11 +41,11 @@ import { getFeaturedPosts } from '../services';
 
 const responsive = {
   superLargeDesktop: {
-    breakpoint: { max: 4000, min: 1024 },
-    items: 5,
+    breakpoint: { max: 4000, min: 1285 },
+    items: 4,
   },
   desktop: {
-    breakpoint: { max: 1024, min: 768 },
+    breakpoint: { max: 1285, min: 768 },
     items: 3,
   },
   tablet: {
@@ -87,7 +87,7 @@ const Top = () => {
 
   return (
     <div className="mb-8">
-      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive} itemClass="px-2">
+      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} ssr={true} responsive={responsive} itemClass="px-4">
       {/* <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive}> */}
         {dataLoaded && featuredPosts.map((post, index) => (
           	<FeaturedPost key={index} post={post} />

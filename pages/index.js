@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-// import styles from '../styles/globals.css'
 import { PostCard, PostWidget, Categories} from '../components';
 import Top from '../section/Top';
 import { getPosts } from '../services'
@@ -8,7 +7,7 @@ import FeaturedPost from '../components/FeaturedPost';
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto lg:px-10 md:px-4 mb-8">
+    <div className="container mx-auto px-4 lg:px-10 mb-8">
 		<Head>
 			<title>Bloggie</title>
 			<link rel="icon" href="/favicon.ico" />
