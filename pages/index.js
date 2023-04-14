@@ -1,3 +1,4 @@
+import 'animate.css';
 import Head from 'next/head'
 import Image from 'next/image'
 import { PostCard, PostWidget, Categories} from '../components';

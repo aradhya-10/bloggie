@@ -1,6 +1,7 @@
 import React, { useState , useEffect} from 'react'
 import Link from 'next/link';
 import { getCategories } from '../services';
+import 'animate.css';
 
 const Header = () => {
 		const [categories, setCategories] = useState([]);
@@ -13,9 +14,9 @@ const Header = () => {
 	return (
 			<div className="conatiner mx-auto px-10 mb-8">
 				<div className="border-b w-full inline-block border-violet-400 py-8">
-					<div className="md:float-left block">
+					<div className="md:float-left block animate__animated animate__bounce">
 						<Link href="/">
-							<span className="cursor-pointer font-bold text-4xl text-white">
+							<span className="cursor-pointer font-bold text-4xl text-white ">
 								SmartParrot
 							</span>
 						</Link>
@@ -24,7 +25,7 @@ const Header = () => {
 					{
 						categories.map((category)=>(
 							<Link key={category.slug} href={`/category/${category.slug}`}>
-								<span className="cursor-pointer md:float-right mt-2 align-middle text-white ml-4 font-semibold">
+								<span className="cursor-pointer md:float-right py-2 hover:py-1 duration-150 mt-2 align-middle text-white ml-4 font-semibold">
 									{category.name}
 								</span>
 							</Link>

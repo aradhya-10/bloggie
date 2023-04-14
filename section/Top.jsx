@@ -87,7 +87,7 @@ const Top = () => {
 
   return (
     <div className="mb-8">
-      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} ssr={true} responsive={responsive} itemClass="px-4">
+      <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} ssr={true} responsive={responsive} itemClass="px-4" >
       {/* <Carousel infinite customLeftArrow={customLeftArrow} customRightArrow={customRightArrow} responsive={responsive}> */}
         {dataLoaded && featuredPosts.map((post, index) => (
           	<FeaturedPost key={index} post={post} />

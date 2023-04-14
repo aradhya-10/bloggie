@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
+import 'animate.css'
 import Link from 'next/link'
 import { getRecentPosts, getSimilarPosts } from '../services'
 
@@ -22,13 +23,15 @@ const PostWidget = ({categories, slug}) => {
 				{slug?'Related Posts' : 'Recent Posts'}
 			</h3>
 			{relatedPosts.map((post)=>(
-				<div key={post.title} className="flex items-center w-full mb-4">
+				<div key={post.title} className="flex items-center w-full mb-4 hover:animate-pulse">
 					<div className="w-16 flex-none">
+						<Link href={`/post/${post.slug}`} key={post.title} className="text-md">
 						<img
 							alt={post.title}
 							className='w-14 h-14 rounded-full object-cover'
 							src={post.featuredImage.url}
-						/>
+							/>
+						</Link>
 					</div>
 					<div className="flex-grow ml-4">
 						<p className='text-gray-500 font-xs'>
